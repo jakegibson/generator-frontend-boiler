@@ -7,6 +7,7 @@
 Angular for large apps, Browserify, Gulp (livereload) Optionally Foundation/Sass or Bootstrap/Less, Coffeescript, and Jade
 
 ### ToDo
-Options for foundation/sass, bootstrap/less (currently does foundation)
-Option for vanilla html
-Option for beastmode
+Options for foundation/sass, bootstrap/less (currently does foundation)  
+Option for vanilla html  
+Option for beastmode  
+ 
