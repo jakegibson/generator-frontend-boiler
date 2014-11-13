@@ -1,0 +1,21 @@
+{
+  "name": "frontend-boiler",
+  "description": "Frontend boiler for rapid development",
+  "version": "0.0.1",
+  "author" : {}, 
+  "dependencies": {},
+  "devDependencies": {
+    "coffeeify": "^0.7.0",
+    "connect-livereload": "^0.5.0",
+    "express": "~3.4.8",
+    "gulp": "~3.5.0",
+    "gulp-coffeeify": "^0.1.2",
+    "gulp-concat": "~2.1.7",
+    "gulp-jade": "~0.3.0",
+    "gulp-livereload": "~0.2.0",
+    "gulp-sass": "^1.1.0",
+    "gulp-uglify": "~0.1.0",
+    "gulp-util": "~2.2.12",
+    "tiny-lr": "0.0.5"
+  }
+}

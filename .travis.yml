@@ -1,0 +1,7 @@
+language: node_js
+node_js:
+  - '0.10'
+before_install:
+  - currentfolder=${PWD##*/}
+  - if [ "$currentfolder" != 'generator-frontend-boiler' ]; then cd .. && eval "mv $currentfolder generator-frontend-boiler" && cd generator-frontend-boiler; fi
+

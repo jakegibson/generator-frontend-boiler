@@ -1,0 +1,37 @@
+{
+  "name": "generator-frontend-boiler",
+  "version": "0.0.0",
+  "description": "Yeoman generator",
+  "license": "MIT",
+  "main": "app/index.js",
+  "repository": "j3dev/generator-frontend-boiler",
+  "author": {
+    "name": "Jake Gibson",
+    "email": "",
+    "url": "https://github.com/j3dev"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "files": [
+    "app"
+  ],
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "dependencies": {
+    "yeoman-generator": "^0.17.0",
+    "chalk": "^0.5.0",
+    "yosay": "^0.3.0",
+    "jade": "^1.7.0"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  },
+  "peerDependencies": {
+    "yo": ">=1.0.0"
+  }
+}
