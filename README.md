@@ -1,5 +1,4 @@
 
-
 #### Modular frontend boiler leveraging browserify and angular to cleanly group by concern
 
 
