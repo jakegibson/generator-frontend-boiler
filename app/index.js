@@ -24,7 +24,8 @@ var FrontendBoilerGenerator = yeoman.generators.Base.extend({
     this.dest.mkdir('dist');
     this.dest.mkdir('dist/app');
     this.dest.mkdir('dist/app/common');
-    this.dest.mkdir('dist/app/assets');
+    this.dest.mkdir('dist/assets');
+
 
 
  
@@ -41,6 +42,7 @@ var FrontendBoilerGenerator = yeoman.generators.Base.extend({
 
        // it makes no sense that this doesn't take a callback silly file.util
       this.directory('src', 'src');
+      this.src.copy('src/assets/img/stack.png', 'dist/assets/img/stack.png');
       this.src.copy('.bowerrc', '.bowerrc');
       this.src.copy('_gulpfile.js', 'gulpfile.js');
       this.src.copy('_package.json', 'package.json');
@@ -56,6 +58,7 @@ var FrontendBoilerGenerator = yeoman.generators.Base.extend({
     this.bowerInstall('foundation', {}, function(){
       //possibly remove the foundation js bloat?
     })
+
   }
 });
 

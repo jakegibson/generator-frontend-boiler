@@ -10,31 +10,38 @@ var gulp        = require('gulp'),
     express     = require('express'),
     app         = express(),
     path        = require('path'),
-    server      = tinylr();
+    server      = tinylr(),
+    ngAnnotate = require('gulp-ng-annotate');
  
  
 // --- Basic Tasks ---
 gulp.task('sass', function () {
-    gulp.src('src/app/assets/foundation/scss/foundation.scss')
+    gulp.src('src/assets/foundation/scss/foundation.scss')
         .pipe(sass())
-        .pipe(gulp.dest('./dist/app/assets/css/'))
+        .pipe(gulp.dest('./dist/assets/css/'))
+        .pipe(livereload( server ));
+
+    gulp.src('src/assets/css/app.scss')
+        .pipe(sass())
+        .pipe(gulp.dest('./dist/assets/css/'))
         .pipe(livereload( server ));
 });
 
 gulp.task('coffee', function() {
   return gulp.src('src/**/*.coffee')
-    .pipe( coffeeify() ) 
-    .pipe( uglify() )
-    //.pipe( concat('all.min.js'))
-    .pipe( gulp.dest('dist/'))
-    .pipe( livereload( server ) );
+    .pipe(coffeeify())
+    .pipe(ngAnnotate())  
+    .pipe(uglify())
+    .pipe(concat('all.min.js'))
+    .pipe(gulp.dest('dist/assets/'))
+    .pipe(livereload( server ));
 });
  
 gulp.task('templates', function() {
   return gulp.src('src/**/*.jade')
-    .pipe( jade({ pretty: true }))
-    .pipe( gulp.dest('dist/'))
-    .pipe( livereload( server ));
+    .pipe(jade({ pretty: true }))
+    .pipe(gulp.dest('dist/'))
+    .pipe(livereload(server));
 });
  
 gulp.task('express', function() {

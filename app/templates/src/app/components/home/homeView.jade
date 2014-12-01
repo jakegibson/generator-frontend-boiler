@@ -1,56 +1,60 @@
-.row
-    .large-3.columns
-        h1
-          img(src='http://placehold.it/400x100&text=Logo')
-      .large-9.columns
-        ul.button-group.right
-          li
-            a.button(href='#') Home
-          li
-            a.button(href='#') Link 2
-          li
-            a.button(href='#') Link 3
-          li
-            a.button(href='#') Link 4
-    .row
-      .large-12.columns
-        img(src='http://placehold.it/1000x400&text=[img]')
-        hr
-    .row
-      .large-4.columns
-        img(src='http://placehold.it/400x300&text=[img]')
-      .large-8.columns
-        h4 This is a content section.
-        .row
-          .large-6.columns
-            p
-              | Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong. Eiusmod swine spare ribs reprehenderit culpa. Boudin aliqua adipisicing rump corned beef.
-          .large-6.columns
-            p
-              | Pork drumstick turkey fugiat. Tri-tip elit turducken pork chop in. Swine short ribs meatball irure bacon nulla pork belly cupidatat meatloaf cow. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami.
-    .row
-      .large-8.columns
-        h4 This is a content section.
-        p
-          | Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong. Eiusmod swine spare ribs reprehenderit culpa. Boudin aliqua adipisicing rump corned beef.
-        p
-          | Pork drumstick turkey fugiat. Tri-tip elit turducken pork chop in. Swine short ribs meatball irure bacon nulla pork belly cupidatat meatloaf cow. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami.
-      .large-4.columns
-        img(src='http://placehold.it/400x300&text=[img]')
-    footer.row
-      .large-12.columns
-        hr
-        .row
-          .large-6.columns
-            p © Copyright no one at all. Go to town.
-          .large-6.columns
-            ul.inline-list.right
-              li
-                a(href='#') Link 1
-              li
-                a(href='#') Link 2
-              li
-                a(href='#') Link 3
-              li
-                a(href='#') Link 4
+extends ../../common/layout/simple.jade
+
+block content
+  .row.fullWidth.homeBanner
+    .large-6.columns.noGutter.yeti
+      img(ng-src='assets/img/stack.png' home-banner)
+    .large-6.columns.homeRight
+      h3.text-center You made it! ::  
+        a(src='https:github.com/jakegibson/generator-frontend-boiler') Repo / Docs
+          
+      
+        
+      h4#structure Structure
+      .panel
+        | index.jade  #bootstrap angular
+        br
+        | assets/ #images, sass, etc
+        br
+        | app/  #angular
+        br
+        | --common/  # modules likely to be reused across many
+        br
+        | --components/ # modules based on concern
+        br
+        | &nbsp;&nbsp;|
+        br
+        | &nbsp;&nbsp;--home/
+        br
+        |&nbsp;&nbsp;&nbsp;&nbsp; |
+        br
+        | &nbsp;&nbsp;&nbsp;&nbsp;--index.coffee # bootstraps
+        br
+        | &nbsp;&nbsp;&nbsp;&nbsp;--controllers.coffee # all controllers for this module go here
+        br
+        | &nbsp;&nbsp;&nbsp;&nbsp;--services.coffee
+        br
+        | &nbsp;&nbsp;&nbsp;&nbsp;--factories.coffee
+        br
+        | &nbsp;&nbsp;&nbsp;&nbsp;--directives.coffee
+        br
+
+      h5 To create another component:
+      .panel
+        | yo frontend-boiler:mod [componentName]
+      h5#notes- Notes:
+      ol
+        li
+          | Our gulp file minifies/concatenates our coffee files, but thanks to gulp-ng-annotate you don't have to worry about using the array of string includes, typically required.  Instead of  
+          code .controller('anotherCtrl',['$scope','someService', ($scope, someService) -&gt;
+          |   we only need 
+          code .controller('anotherCtrl', ($scope, someService) -&gt;
+        li Livereload is setup so no reloading/refreshing 
+      
+  
+
+
+
+
+  
 

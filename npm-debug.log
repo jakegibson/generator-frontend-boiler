@@ -4,19 +4,19 @@
 3 info using node@v0.10.32
 4 verbose node symlink /usr/bin/node
 5 verbose linkPkg /home/jake/Desktop/generator-frontend-boiler
-6 error Error: EACCES, unlink '/usr/lib/node_modules/generator-frontend-boiler'
-6 error  { [Error: EACCES, unlink '/usr/lib/node_modules/generator-frontend-boiler']
+6 error Error: EACCES, symlink '/home/jake/Desktop/generator-frontend-boiler'
+6 error  { [Error: EACCES, symlink '/home/jake/Desktop/generator-frontend-boiler']
 6 error   errno: 3,
 6 error   code: 'EACCES',
-6 error   path: '/usr/lib/node_modules/generator-frontend-boiler' }
+6 error   path: '/home/jake/Desktop/generator-frontend-boiler' }
 7 error Please try running this command again as root/Administrator.
 8 error System Linux 3.13.0-24-generic
 9 error command "/usr/bin/node" "/usr/bin/npm" "link"
 10 error cwd /home/jake/Desktop/generator-frontend-boiler
 11 error node -v v0.10.32
 12 error npm -v 1.4.28
-13 error path /usr/lib/node_modules/generator-frontend-boiler
+13 error path /home/jake/Desktop/generator-frontend-boiler
 14 error code EACCES
 15 error errno 3
-16 error stack Error: EACCES, unlink '/usr/lib/node_modules/generator-frontend-boiler'
+16 error stack Error: EACCES, symlink '/home/jake/Desktop/generator-frontend-boiler'
 17 verbose exit [ 3, true ]

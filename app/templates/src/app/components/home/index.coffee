@@ -1,5 +1,8 @@
-home = angular.module('home', [])
+app = angular.module('home', [])
 
-require('./homeCtrl')(home)
+require('./controllers')(app)
+require('./directives')(app)
+#require('./services')(app)
+#require('./factories')(app)
 
-module.exports = home
+module.exports = app
