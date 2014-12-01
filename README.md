@@ -1,5 +1,6 @@
 
-#### Modular frontend boiler leveraging browserify to cleanly group by concern
+#### Modular frontend boiler leveraging browserify and angular to cleanly group by concern
+
     index.jade  #bootstrap angular
     assets/ #images, sass, etc
     app/  #angular
@@ -16,6 +17,7 @@
          
 
 A component's index.coffee contains:
+
     app = angular.module('home', [])
 
     require('./controllers')(app)
@@ -26,6 +28,7 @@ A component's index.coffee contains:
     module.exports = app
 
 A controllers.coffee file would look like:
+
     module.exports = (app)->
       app.controller('homeCtrl', ($scope)->
     
@@ -35,6 +38,7 @@ A controllers.coffee file would look like:
       )
 
 An example of requiring a compnonent in our app (app.coffee):
+
     home = require('./components/home')
     routes = require('./routes')
     
