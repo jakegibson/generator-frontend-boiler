@@ -1,6 +1,6 @@
 {
   "name": "generator-frontend-boiler",
-  "version": "0.0.2b",
+  "version": "0.0.3b",
   "description": "Yeoman generator",
   "license": "MIT",
   "main": "app/index.js",
@@ -17,7 +17,8 @@
     "test": "mocha"
   },
   "files": [
-    "app"
+    "app",
+    "mod"
   ],
   "keywords": [
     "yeoman-generator"
